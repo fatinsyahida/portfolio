@@ -1,10 +1,20 @@
-p {
-  color: black;
-  text-align: center;
-}
-
 :host {
   display: block;
-  background-color: #f3f3f3;
-  padding: 1rem;
+  background-color: #1a1a2e; /* dark navy/purple tone to match navbar */
+  padding: 1rem 0;
+  text-align: center;
+  color: #d1d5db; /* light gray text for contrast */
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* subtle separation line */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:host p {
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+:host:hover {
+  background-color: #1a1a2e; /* slightly lighter dark tone on hover */
+  color: #f9a8d4; /* soft pinkish text highlight */
 }

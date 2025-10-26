@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+[appScrollAnimation] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+[appScrollAnimation].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color: #0d0d0f;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+section {
+  width: 100%;
+}
+
+/* === Fade-in Animations === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.translate-left {
+  transform: translateX(-60px);
+}
+
+.translate-right {
+  transform: translateX(60px);
+}
+
+.translate-top {
+  transform: translateY(-60px);
+}
+
+.translate-bottom {
+  transform: translateY(60px);
+}
