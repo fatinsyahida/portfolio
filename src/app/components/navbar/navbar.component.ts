@@ -19,4 +19,6 @@ export class NavbarComponent {
   closeMenu() {
     this.isMenuOpen = false;
   }
+
+  
 }

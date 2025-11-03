@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ScrollAnimationDirective } from '../../shared/scroll-animation.directive';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [RouterModule],
+  imports: [ScrollAnimationDirective],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-
+  scrollToContact() {
+    const contactSection = document.querySelector('#contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  }
 }

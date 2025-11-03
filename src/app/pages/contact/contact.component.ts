@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ScrollAnimationDirective } from '../../shared/scroll-animation.directive';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [RouterModule],
+  imports: [ScrollAnimationDirective],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-
+  downloadResume() {
+    const url = '/assets/Fatin_Syahida_Saharudin_Resume.pdf';
+    window.open(url, '_blank');
+  }
 }

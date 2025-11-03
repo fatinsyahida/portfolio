@@ -1,9 +1,43 @@
-<section class="section light" appScrollAnimation>
-  <div class="container">
-    <h2>About Me</h2>
-    <p>
-      I’m passionate about creating elegant, functional, and responsive web applications.
-      With a strong foundation in Angular and Flutter, I enjoy crafting intuitive user experiences.
-    </p>
+<div id="about" class="w-full min-h-[80vh] text-white py-20 flex items-center" appScrollAnimation="left">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    <!-- Image first (on mobile) -->
+    <div class="flex-1 flex justify-center md:justify-end relative order-1 md:order-2">
+      <div class="absolute w-72 h-72 bg-pink-500 opacity-20 blur-3xl rounded-full"></div>
+      <img src="assets/fatin-photo.jpg" alt="Fatin Syahida"
+        class="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover shadow-xl border-4 border-pink-500 relative z-10 hover:scale-105 transition-transform duration-500" />
+    </div>
+
+    <!-- Text second (on mobile) -->
+    <div class="flex-1 text-center md:text-left order-2 md:order-1">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-pink-400">Hi, I'm Fatin Syahida! 🌷</h2>
+      <!-- <p class="text-base sm:text-lg leading-relaxed text-gray-300 mb-6">
+        I'm a passionate <span class="text-pink-400">Software Developer</span> who loves
+        transforming ideas into beautiful, user-centered applications.
+        I specialize in <span class="text-pink-600">Flutter</span> and
+        <span class="text-pink-600">Angular</span> — crafting experiences that blend
+        creativity with clean functionality.
+      </p> -->
+      <p class="text-base sm:text-lg leading-relaxed text-gray-300 mb-6">
+        I'm a <span class="text-pink-400">Software Developer</span> experienced in building
+        scalable and intuitive web and mobile applications. I enjoy creating clean,
+        user-focused solutions using <span class="text-pink-600">Flutter</span>,
+        <span class="text-pink-600">Angular</span>, and <span class="text-pink-600">Spring Boot</span>.
+        With hands-on experience in government and enterprise projects, I aim to bridge
+        design and functionality — crafting technology that feels effortless to use.
+      </p>
+
+
+      <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-6">
+        <span class="tag">⚡ Fullstack Explorer</span>
+        <span class="tag">🌐 Web Enthusiast</span>
+        <span class="tag">📱 Mobile App Developer</span>
+      </div>
+
+      <button
+        class="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-md"
+        (click)="scrollToContact()">
+        Let’s Connect
+      </button>
+    </div>
   </div>
-</section>
+</div>

@@ -28,7 +28,7 @@ a:hover span {
 
 /* Mobile link animation */
 .mobile-link {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(-10px);
   animation: fadeSlideIn 0.4s forwards ease-out;
 }
@@ -38,4 +38,38 @@ a:hover span {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.menu-link {
+  position: relative;
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #f3f4f6; /* text-gray-100 */
+  transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+  color: #f472b6; /* pink-400 */
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ec4899; /* pink-500 */
+  transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+.mobile-menu {
+  background-color: #0b0b0c !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
 }

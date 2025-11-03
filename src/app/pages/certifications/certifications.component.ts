@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ScrollAnimationDirective } from '../../shared/scroll-animation.directive';
 
 @Component({
-  selector: 'app-skills',
+  selector: 'app-certifications',
   standalone: true,
   imports: [ScrollAnimationDirective],
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+  templateUrl: './certifications.component.html',
+  styleUrls: ['./certifications.component.css']
 })
-export class SkillsComponent {}
+export class CertificationsComponent {}

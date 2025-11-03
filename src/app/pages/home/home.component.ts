@@ -1,13 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ScrollAnimationDirective } from '../../shared/scroll-animation.directive';
+import { AboutComponent } from "../about/about.component";
+import { SkillsComponent } from "../skills/skills.component";
+import { ExperienceComponent } from "../experience/experience.component";
+import { CertificationsComponent } from "../certifications/certifications.component";
+import { ContactComponent } from "../contact/contact.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, ScrollAnimationDirective],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ScrollAnimationDirective,
+    AboutComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    ExperienceComponent,
+    CertificationsComponent,
+    ContactComponent
+],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -75,4 +90,26 @@ export class HomeComponent {
   }
 }
 
+@ViewChild('aboutSection', { read: ElementRef }) aboutSection!: ElementRef;
+  @ViewChild('skillsSection') skillsSection!: ElementRef;
+  @ViewChild('projectsSection') projectsSection!: ElementRef;
+  @ViewChild('experienceSection') experienceSection!: ElementRef;
+  @ViewChild('certificationsSection') certificationsSection!: ElementRef;
+  @ViewChild('contactSection') contactSection!: ElementRef;
+
+  scrollToSection(section: string) {
+    let element: ElementRef;
+
+    switch (section) {
+      case 'about': element = this.aboutSection; break;
+      case 'skills': element = this.skillsSection; break;
+      case 'projects': element = this.projectsSection; break;
+      case 'experience': element = this.experienceSection; break;
+      case 'certifications': element = this.certificationsSection; break;
+      case 'contact': element = this.contactSection; break;
+      default: return;
+    }
+
+    element.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
