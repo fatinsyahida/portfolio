@@ -15,12 +15,12 @@
 
 html,
 body {
-    @apply bg-darkbg text-gray-100 font-sans;
+  @apply bg-darkbg text-gray-100 font-sans;
 }
 
 section {
   /* width: 100%; */
-    @apply border border-gray-800 rounded-2xl p-6 bg-[#1a1a1a]/70 backdrop-blur-sm;
+  @apply border border-gray-800 rounded-2xl p-6 bg-[#1a1a1a]/70 backdrop-blur-sm;
 
 }
 
@@ -30,6 +30,7 @@ section {
     opacity: 0;
     transform: translateY(40px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -128,11 +129,16 @@ section:nth-child(even) .card {
 }
 
 #certifications .card {
-  background-color: rgba(255, 238, 249, 0.925); /* soft pink opaque */
-  color: #1e1b24; /* dark text */
+  background-color: white;
+  color: #1e1b24;
+  /* dark text */
 }
+
 #certifications .card:hover {
-  background-color: rgba(255, 230, 246, 0.925); /* soft pink opaque */
+  background-color: #ec4899/10;
+  color: #ec4899;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -194,11 +200,13 @@ section {
 }
 
 .card-skill {
-  @apply flex flex-col items-center justify-center bg-white text-gray-700 font-medium rounded-lg shadow-md 
-         px-2 py-4 transition-all duration-300 hover:bg-pink-100 hover:text-pink-600 transform hover:-translate-y-1 hover:shadow-lg;
-  width: 100%;           /* Take full width of grid column */
-  aspect-ratio: 1 / 1;   /* Make all cards square for uniform height */
+  @apply flex flex-col items-center justify-center bg-white text-gray-700 font-medium rounded-lg shadow-md px-2 py-4 transition-all duration-300 hover:bg-pink-100 hover:text-pink-600 transform hover:-translate-y-1 hover:shadow-lg;
+  width: 100%;
+  /* Take full width of grid column */
+  aspect-ratio: 1 / 1;
+  /* Make all cards square for uniform height */
 }
+
 .card-skill img {
   @apply h-8 w-8;
 }
@@ -207,7 +215,7 @@ section {
   background-color: #ec4899/10;
   color: #ec4899;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
