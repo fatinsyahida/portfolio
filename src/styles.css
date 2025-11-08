@@ -20,7 +20,7 @@ body {
 
 section {
   /* width: 100%; */
-  @apply border border-gray-800 rounded-2xl p-6 bg-[#1a1a1a]/70 backdrop-blur-sm;
+  @apply rounded-2xl p-6 bg-[#1a1a1a]/70 backdrop-blur-sm;
 
 }
 
@@ -218,11 +218,6 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
-
 .project-card {
   @apply bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-2xl py-10 px-8 w-64 h-48 flex items-center justify-center text-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl;
 }
@@ -230,3 +225,98 @@ section {
 .tag {
   @apply bg-pink-600/20 text-white text-sm px-3 py-1 rounded-full border border-pink-500/30 backdrop-blur-sm transition-all hover:bg-pink-500/30;
 }
+
+/* Animate the line fade-in */
+@keyframes timelineGrow {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.before\:animate-timeline::before {
+  animation: timelineGrow 2s ease-out forwards;
+}
+
+/* Line grow (from height:0 to full parent height) */
+@keyframes growLine {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+.animate-growLine {
+  animation: growLine 1.2s ease-out forwards;
+}
+
+/* Dot pop */
+@keyframes fadeDot {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-fadeDot {
+  animation: fadeDot 0.6s ease-out forwards;
+}
+
+/* Content fade & slide up */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-lineGrow::before {
+  animation: growLine 1.5s ease-in-out forwards;
+}
+
+.visible-dot {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0; /* make it stretch fully */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background: linear-gradient(to bottom, #ec4899, #f9a8d4);
+  border-radius: 9999px;
+  z-index: 0;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ec4899;
+  border-radius: 50%;
+  position: absolute;
+  left: calc(50% - 6px); /* centers dot on line */
+  top: 0;
+  z-index: 20;
+}
+
+
+/* Cards should be above line */
+.relative.z-10 { z-index: 10; }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

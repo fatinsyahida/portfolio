@@ -1,12 +1,203 @@
 <!-- PROJECTS -->
 <div id="projects" class="min-h-[70vh] py-20" appScrollAnimation="bottom">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-10 text-pink-600">Featured Projects</h2>
-    <div class="flex flex-wrap justify-center gap-8">
-      <div class="project-card">JPJ eBid App</div>
-      <div class="project-card">KPSP Public App</div>
-      <div class="project-card">Refund Management System</div>
-      <div class="project-card">Portfolio Website</div>
+  <div class="max-w-6xl mx-auto px-6 text-center relative">
+    <h2 class="text-3xl font-bold mb-12 text-pink-600">Projects</h2>
+
+    <!-- Navigation Buttons -->
+    <!-- <button id="scrollLeft"
+      class="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 bg-pink-500 hover:bg-pink-600 text-white 
+             rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300 opacity-0 
+             pointer-events-none shadow-lg">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <button id="scrollRight"
+      class="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 bg-pink-500 hover:bg-pink-600 text-white 
+             rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300 shadow-lg">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button> -->
+
+    <!-- Scrollable Container -->
+    <div id="projectsContainer"
+      class="relative flex overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth w-full px-0 sm:px-0 pb-4">
+      <div class="inline-flex space-x-6">
+
+        <!-- Repeat Project Cards -->
+        <!-- Project Card 1 -->
+        <div class="flex-shrink-0 snap-start w-[280px] sm:w-80 bg-[#151517] rounded-2xl shadow-lg hover:shadow-pink-600/40
+                 transition-all duration-300 transform hover:-translate-y-1">
+          <img src="assets/coding.jpg" alt="JPJ eBid App" class="w-full h-40 object-cover rounded-t-2xl" />
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-pink-400 mb-2">JPJ eLelong App</h3>
+            <p class="text-sm text-gray-300">Flutter-based vehicle auction app for JPJ, integrating custom APIs for auction functionalities and state management with Bloc. Contributed to mobile and backend API development.</p>
+            <p class="mt-3 text-xs text-gray-400">Tech: Flutter · Dart · Bloc · REST API · Spring Boot</p>
+            <!-- <div class="flex space-x-3 mt-4">
+              <a href="https://github.com/your-repo" target="_blank"
+                 class="px-3 py-2 bg-pink-400 text-[#0b0b0c] rounded-lg text-xs font-semibold hover:bg-pink-500 transition">
+                 View Code
+              </a>
+              <a href="https://www.figma.com/proto/..." target="_blank"
+                 class="px-3 py-2 bg-gray-700 text-[#f9f3fb] rounded-lg text-xs font-semibold hover:bg-gray-600 transition">
+                 Live Demo
+              </a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="flex-shrink-0 snap-start w-[280px] sm:w-80 bg-[#151517] rounded-2xl shadow-lg hover:shadow-pink-600/40
+                 transition-all duration-300 transform hover:-translate-y-1">
+          <img src="assets/coding.jpg" alt="Refund System" class="w-full h-40 object-cover rounded-t-2xl" />
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-pink-400 mb-2">Kulim Smart Parking Backoffice</h3>
+            <p class="text-sm text-gray-300">Angular-based municipal council platform. Developed modules for summons, vehicle management, transaction monitoring, complaint handling, and analytics. Improved system usability for daily operations.</p>
+            <p class="mt-3 text-xs text-gray-400">Tech: Angular · TypeScript · Tailwind CSS · REST API</p>
+            <!-- <div class="flex space-x-3 mt-4">
+              <a href="https://github.com/your-repo" target="_blank"
+                 class="px-3 py-2 bg-pink-400 text-[#0b0b0c] rounded-lg text-xs font-semibold hover:bg-pink-500 transition">
+                 View Code
+              </a>
+              <a href="https://live-demo.com" target="_blank"
+                 class="px-3 py-2 bg-gray-700 text-[#f9f3fb] rounded-lg text-xs font-semibold hover:bg-gray-600 transition">
+                 Live Demo
+              </a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="flex-shrink-0 snap-start w-[280px] sm:w-80 bg-[#151517] rounded-2xl shadow-lg hover:shadow-pink-600/40
+                 transition-all duration-300 transform hover:-translate-y-1">
+          <img src="assets/coding.jpg" alt="Catalog Upload & Payment" class="w-full h-40 object-cover rounded-t-2xl" />
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-pink-400 mb-2">Smart Kubang Pasu Mobile App</h3>
+            <p class="text-sm text-gray-300">
+              Flutter mobile app built from scratch. Implemented interactive features and API integration using Bloc. Collaborated with backend to deliver a user-friendly system.
+            </p>
+            <p class="mt-3 text-xs text-gray-400">Tech: Flutter · Dart · Bloc</p>
+            <!-- <div class="flex space-x-3 mt-4">
+              <a href="https://github.com/your-repo" target="_blank"
+                class="px-3 py-2 bg-pink-400 text-[#0b0b0c] rounded-lg text-xs font-semibold hover:bg-pink-500 transition">
+                View Code
+              </a>
+              <a href="https://live-demo.com" target="_blank"
+                class="px-3 py-2 bg-gray-700 text-[#f9f3fb] rounded-lg text-xs font-semibold hover:bg-gray-600 transition">
+                Live Demo
+              </a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="flex-shrink-0 snap-start w-[280px] sm:w-80 bg-[#151517] rounded-2xl shadow-lg hover:shadow-pink-600/40
+                 transition-all duration-300 transform hover:-translate-y-1">
+          <img src="assets/coding.jpg" alt="Spring Boot File Upload API"
+            class="w-full h-40 object-cover rounded-t-2xl" />
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-pink-400 mb-2">Kulim Smart Parking Chatbot</h3>
+            <p class="text-sm text-gray-300">
+              Designed and developed a chatbot for FAQs, interactive responses, and live chat support using Live Helper Chat. Enhanced user experience for mobile app users.
+            </p>
+            <p class="mt-3 text-xs text-gray-400">Tech: Live Helper Chat</p>
+            <!-- <div class="flex space-x-3 mt-4">
+              <a href="https://github.com/your-repo" target="_blank"
+                class="px-3 py-2 bg-pink-400 text-[#0b0b0c] rounded-lg text-xs font-semibold hover:bg-pink-500 transition">
+                View Code
+              </a>
+              <a href="https://live-demo.com" target="_blank"
+                class="px-3 py-2 bg-gray-700 text-[#f9f3fb] rounded-lg text-xs font-semibold hover:bg-gray-600 transition">
+                Live Demo
+              </a>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="flex-shrink-0 snap-start w-[280px] sm:w-80 bg-[#151517] rounded-2xl shadow-lg hover:shadow-pink-600/40
+                 transition-all duration-300 transform hover:-translate-y-1">
+          <img src="assets/coding.jpg" alt="Portfolio Website" class="w-full h-40 object-cover rounded-t-2xl" />
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-pink-400 mb-2">News Sentiment Analysis Dashboard</h3>
+            <p class="text-sm text-gray-300">
+              Developed a Python dashboard analyzing Malaysian news sentiment during COVID-19. Used opinion lexicon–based classification and interactive data visualization to track sentiment trends over time.
+            </p>
+            <p class="mt-3 text-xs text-gray-400">Tech: Python · Pandas · Matplotlib · Flask</p>
+            <!-- <div class="flex space-x-3 mt-4">
+              <a href="https://github.com/your-repo" target="_blank"
+                class="px-3 py-2 bg-pink-400 text-[#0b0b0c] rounded-lg text-xs font-semibold hover:bg-pink-500 transition">
+                View Code
+              </a>
+              <a href="https://live-demo.com" target="_blank"
+                class="px-3 py-2 bg-gray-700 text-[#f9f3fb] rounded-lg text-xs font-semibold hover:bg-gray-600 transition">
+                Live Demo
+              </a>
+            </div> -->
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.getElementById('projectsContainer');
+  const scrollLeftBtn = document.getElementById('scrollLeft');
+  const scrollRightBtn = document.getElementById('scrollRight');
+
+  function updateScrollButtons() {
+    const scrollLeft = container.scrollLeft;
+    const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    const tolerance = 5;
+
+    // Left arrow visibility
+    if (scrollLeft > tolerance) {
+      scrollLeftBtn.classList.remove('opacity-0', 'pointer-events-none');
+      scrollLeftBtn.classList.add('opacity-100', 'pointer-events-auto');
+    } else {
+      scrollLeftBtn.classList.add('opacity-0', 'pointer-events-none');
+      scrollLeftBtn.classList.remove('opacity-100', 'pointer-events-auto');
+    }
+
+    // Right arrow visibility
+    if (scrollLeft < maxScrollLeft - tolerance) {
+      scrollRightBtn.classList.remove('opacity-0', 'pointer-events-none');
+      scrollRightBtn.classList.add('opacity-100', 'pointer-events-auto');
+    } else {
+      scrollRightBtn.classList.add('opacity-0', 'pointer-events-none');
+      scrollRightBtn.classList.remove('opacity-100', 'pointer-events-auto');
+    }
+  }
+
+  // Scroll buttons
+  const cardWidth = 280; // adjust if different
+  const gap = 24; // space-x-6 = 24px
+  scrollLeftBtn.addEventListener('click', () => {
+    container.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+  });
+  scrollRightBtn.addEventListener('click', () => {
+    container.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+  });
+
+  container.addEventListener('scroll', updateScrollButtons);
+  window.addEventListener('resize', () => requestAnimationFrame(updateScrollButtons));
+
+  // Wait for images to load so scrollWidth is correct
+  const images = container.querySelectorAll('img');
+  let loaded = 0;
+  images.forEach(img => {
+    if (img.complete) loaded++;
+    else img.addEventListener('load', () => {
+      loaded++;
+      if (loaded === images.length) requestAnimationFrame(updateScrollButtons);
+    });
+  });
+  if (loaded === images.length) requestAnimationFrame(updateScrollButtons);
+});
+</script>

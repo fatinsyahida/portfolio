@@ -1,0 +1,20 @@
+/* Animation base */
+.animate-fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
+}
+
+/* Starting positions */
+.translate-bottom {
+  transform: translateY(30px);
+}
+.translate-top {
+  transform: translateY(-30px);
+}
+.translate-left {
+  transform: translateX(-30px);
+}
+.translate-right {
+  transform: translateX(30px);
+}
